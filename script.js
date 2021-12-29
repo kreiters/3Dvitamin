@@ -6,11 +6,11 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
     
             const scene = new BABYLON.Scene(engine);  
 
-            //BABYLON.MeshBuilder.CreateBox("box", {})
+            //BABYLON.MeshBuilder.CreateCapsule("capsule", {})
             const capsule = new BABYLON.MeshBuilder.CreateCapsule("capsule", {radius:0.5, capSubdivisions: 6, subdivisions:6, tessellation:36, height:2.5, orientation:BABYLON.Vector3.Forward()});
             // GUI
             var plane = BABYLON.Mesh.CreatePlane("plane", 2);
-            plane.parent = sphere;
+            plane.parent = capsule;
             plane.position.y = 2;
 
             var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(plane);
