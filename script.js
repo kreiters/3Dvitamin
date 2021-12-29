@@ -11,11 +11,12 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             
             const ground = BABYLON.MeshBuilder.CreateGround("ground", {width:10, height:10});    
             
-            capsule.position.y = 2;
+            capsule.position.y = 1.25;
             // GUI
             var plane = BABYLON.Mesh.CreatePlane("plane", 2);
             plane.parent = ground;
             plane.position.y = 2;
+            plane.position.x = -10;
 
             var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(plane);
 
