@@ -44,7 +44,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
 
         // Register a render loop to repeatedly render the scene
         engine.runRenderLoop(function () {
-                scene.getMeshByName("capsule").position.y += 0.01;
+                scene.getMeshByName("capsule").rotate.y += 0.01;
                 scene.render();
                 
         });
