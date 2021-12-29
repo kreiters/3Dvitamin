@@ -19,7 +19,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             button1.width = 1;
             button1.height = 0.4;
             button1.color = "white";
-            button1.fontSize = 50;
+            button1.fontSize = 100;
             button1.background = "green";
             button1.onPointerUpObservable.add(function() {
                 alert("you opened the vitamin!");
