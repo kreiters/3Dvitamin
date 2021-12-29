@@ -16,7 +16,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             var plane = BABYLON.Mesh.CreatePlane("plane", 2);
             plane.parent = ground;
             plane.position.y = 2;
-            plane.position.x = -10;
+            plane.position.z = -10;
 
             var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateForMesh(plane);
 
