@@ -1,3 +1,5 @@
+let capsule;
+
 const canvas = document.getElementById("renderCanvas"); // Get the canvas element
         const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
@@ -7,7 +9,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             const scene = new BABYLON.Scene(engine);  
 
             //BABYLON.MeshBuilder.CreateCapsule("capsule", {})
-            const capsule = new BABYLON.MeshBuilder.CreateCapsule("capsule", {radius:0.5, capSubdivisions: 6, subdivisions:6, tessellation:36, height:2.5, orientation:BABYLON.Vector3.Forward()});
+            capsule = new BABYLON.MeshBuilder.CreateCapsule("capsule", {radius:0.5, capSubdivisions: 6, subdivisions:6, tessellation:36, height:2.5, orientation:BABYLON.Vector3.Forward()});
             
             const ground = BABYLON.MeshBuilder.CreateGround("ground", {width:10, height:10});    
             
@@ -44,7 +46,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
 
         // Register a render loop to repeatedly render the scene
         engine.runRenderLoop(function () {
-                mesh.capsule.rotate(0.01, scene);
+                capsule.rotate.y += 0.01;
                 scene.render();
                 
         });
