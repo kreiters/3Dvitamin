@@ -14,8 +14,9 @@ html, body {
 
 .banner{
     width: 100%;
+    height: 30%;
     background-color: cyan;
 }
 h1{
-    font-size: 22px;
+    font-size: 2rem;
 }
