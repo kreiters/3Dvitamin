@@ -12,7 +12,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             capsule = new BABYLON.MeshBuilder.CreateCapsule("capsule", {radius:0.5, capSubdivisions: 6, subdivisions:6, tessellation:36, height:2.5, orientation:BABYLON.Vector3.Forward()});
             
             const ground = BABYLON.MeshBuilder.CreateGround("ground", {width:8, height:8});
-            ground.background = "orange";
+            ground.useAutoRotationBehavior = false;
             
             capsule.position.y = 1.25;
             capsule.rotate.y = 90;   
