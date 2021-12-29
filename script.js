@@ -7,7 +7,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             const scene = new BABYLON.Scene(engine);  
 
             //BABYLON.MeshBuilder.CreateBox("box", {})
-            const capsule = new BABYLON.MeshBuilder.CreateCapsule("capsule", {radius:0.25, capSubdivisions: 6, subdivisions:6, tessellation:36, height:2, orientation:BABYLON.Vector3.Forward()});
+            const capsule = new BABYLON.MeshBuilder.CreateCapsule("capsule", {radius:0.5, capSubdivisions: 6, subdivisions:6, tessellation:36, height:2, orientation:BABYLON.Vector3.Forward()});
 
             const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 8, new BABYLON.Vector3(0, 0, 0));
             camera.attachControl(canvas, true);
