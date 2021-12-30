@@ -56,3 +56,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
         window.addEventListener("resize", function () {
                 engine.resize();
         });
+
+        capsule.addEventListener("click", function () {
+                alert("You clicked the vitamin!");   
+        )};
