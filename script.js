@@ -15,7 +15,7 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             ground.useAutoRotationBehavior = false;
             
             capsule.position.y = 1.25;
-            capsule.rotation.y = Math.PI/8;   
+            capsule.rotation.y = Math.PI/2;   
                 
             // GUI
             var plane = BABYLON.Mesh.CreatePlane("plane", 2);
