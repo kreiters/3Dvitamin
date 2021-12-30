@@ -59,4 +59,4 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
 
         capsule.addEventListener("click", function () {
                 alert("You clicked the vitamin!");   
-        )};
+        };
