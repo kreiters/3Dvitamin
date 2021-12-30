@@ -13,6 +13,32 @@ const canvas = document.getElementById("renderCanvas"); // Get the canvas elemen
             
             const ground = BABYLON.MeshBuilder.CreateGround("ground", {width:8, height:8});
             ground.useAutoRotationBehavior = false;
+            // Create terrain material
+                var terrainMaterial = new BABYLON.TerrainMaterial("terrainMaterial", scene);
+            terrainMaterial.specularColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+            terrainMaterial.specularPower = 64;
+
+                // Set the mix texture (represents the RGB values)
+            terrainMaterial.mixTexture = new BABYLON.Texture("textures/mixMap.png", scene);
+
+                // Diffuse textures following the RGB values of the mix map
+                // diffuseTexture1: Red
+                // diffuseTexture2: Green
+                // diffuseTexture3: Blue
+            terrainMaterial.diffuseTexture1 = new BABYLON.Texture("textures/floor.png", scene);
+            terrainMaterial.diffuseTexture2 = new BABYLON.Texture("textures/rock.png", scene);
+            terrainMaterial.diffuseTexture3 = new BABYLON.Texture("textures/grass.png", scene);
+
+                // Bump textures according to the previously set diffuse textures
+            terrainMaterial.bumpTexture1 = new BABYLON.Texture("textures/floor_bump.png", scene);
+            terrainMaterial.bumpTexture2 = new BABYLON.Texture("textures/rockn.png", scene);
+            terrainMaterial.bumpTexture3 = new BABYLON.Texture("textures/grassn.png", scene);
+
+            // Rescale textures according to the terrain
+            terrainMaterial.diffuseTexture1.uScale = terrainMaterial.diffuseTexture1.vScale = 10;
+            terrainMaterial.diffuseTexture2.uScale = terrainMaterial.diffuseTexture2.vScale = 10;
+            terrainMaterial.diffuseTexture3.uScale = terrainMaterial.diffuseTexture3.vScale = 10;
+
             
             capsule.position.y = 1.25;
             capsule.rotation.y = Math.PI/2;   
